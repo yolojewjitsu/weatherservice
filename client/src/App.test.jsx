@@ -80,7 +80,7 @@ describe('App component', () => {
       render(<App />);
     });
 
-    const toggleButton = screen.getByText(/EN/i);
+    const toggleButton = screen.getAllByRole('button', { name: /EN/i })[0];
 
     fireEvent.click(toggleButton);
 
@@ -106,5 +106,18 @@ describe('App component', () => {
     console.log('Fetching data and expecting spinner to be displayed');
 
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
+  });
+
+  test('opens documentation in a new tab', async () => {
+    window.open = jest.fn();
+
+    await act(async () => {
+      render(<App />);
+    });
+
+    const docButton = screen.getByText(/Documentation/i);
+    fireEvent.click(docButton);
+
+    expect(window.open).toHaveBeenCalledWith('http://localhost:3000/api-docs', '_blank');
   });
 });
