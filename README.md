@@ -13,7 +13,7 @@
 
 ## Демо
 
-- Фронтенд: [[https://weatherclient-b3v80t2bc-yolojewjitsus-projects.vercel.app/](https://weatherclient-b3v80t2bc-yolojewjitsus-projects.vercel.app/)](https://weather-1in6.vercel.app/)
+- Фронтенд: [(https://weather-1in6.vercel.app/)](https://weather-1in6.vercel.app/)
 - Swagger UI для бэкенда: [https://weather-n7nk.onrender.com/api-docs](https://weather-n7nk.onrender.com/api-docs)
 
 ## Особенности
